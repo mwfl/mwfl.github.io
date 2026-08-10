@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title description">
-  <title id="title">mwtl geometric space mark</title>
+  <title id="title">mwfl geometric space mark</title>
   <desc id="description">A luminous three-dimensional octahedron on a blue-violet cosmic gradient.</desc>
   <defs>
     <radialGradient id="space" cx="28%" cy="20%" r="105%"><stop offset="0" stop-color="#8be0ff"/><stop offset=".42" stop-color="#388ce9"/><stop offset=".76" stop-color="#3949c9"/><stop offset="1" stop-color="#171957"/></radialGradient>
