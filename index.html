@@ -10,7 +10,7 @@
   <meta property="og:title" content="mwfl — Modern Windows Foundation Layer">
   <meta property="og:description" content="Real HWND controls, typed events, checked setup, and DPI-aware responsive layout — without closing off Win32.">
   <meta property="og:url" content="https://mwfl.github.io/">
-  <meta property="og:image" content="https://mwfl.github.io/assets/mwfl-mark.svg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/showcase/capability-collage.svg">
   <meta name="theme-color" content="#f7f9ff">
   <link rel="icon" type="image/svg+xml" href="assets/mwfl-mark.svg">
   <link rel="stylesheet" href="styles.css?v=20260810a">
@@ -24,6 +24,7 @@
       <a class="brand" href="index.html" aria-label="MWFL — Modern Windows Foundation Layer"><img src="assets/mwfl-mark.svg" alt=""><span>MWFL</span></a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="components/index.html">Components</a>
+        <a href="#layers">Choose a layer</a>
         <a href="tutorial.html">Get started</a>
         <a href="building.html">Build reference</a>
         <a href="changelog.html">Changelog</a>
@@ -45,6 +46,7 @@
           <a class="button" href="components/catalog.html">Explore all components</a>
           <a class="button" href="notepad.html">Build the Notepad reference app</a>
             <a class="button" href="markdown-editor.html">Explore the Markdown Editor</a>
+            <a class="button" href="pdf-viewer.html">Explore the PDF Viewer</a>
             <a class="button" href="document-workspace.html">Build a multi-document workspace</a>
             <a class="button" href="docking-workspace.html">Build an IDE docking workspace</a>
         </div>
@@ -80,12 +82,12 @@ private:
     <section class="shell" aria-label="Latest release">
       <div class="cta-band">
         <div>
-          <div class="eyebrow">First public release</div>
-          <h2>mwfl 0.1.0 is available.</h2>
-          <p>Download the tested VS2026/MSVC x64 package, or review the public baseline.</p>
+          <div class="eyebrow">Current public preview</div>
+          <h2>mwfl 0.1.2 is ready to explore.</h2>
+          <p>Download the tested VS2026/MSVC x64 binary preview, or build x64 and ARM64 from source.</p>
         </div>
         <div class="actions">
-          <a class="button primary" href="https://github.com/mwfl/mwfl/releases/tag/v0.1.0">Download</a>
+          <a class="button primary" href="https://github.com/mwfl/mwfl/releases/tag/v0.1.2">Download</a>
           <a class="button" href="changelog.html">Read the changelog</a>
         </div>
       </div>
@@ -93,10 +95,35 @@ private:
 
     <section class="shell" aria-label="Project facts">
       <div class="stat-strip">
-        <div><strong>41</strong><span>documented capability slices</span></div>
-        <div><strong>43</strong><span>runnable example programs</span></div>
+        <div><strong>45</strong><span>documented capability slices</span></div>
+        <div><strong>43</strong><span>compiled examples</span></div>
         <div><strong>C++20</strong><span>concepts, RAII, ranges</span></div>
         <div><strong>MIT</strong><span>Windows 10 1809+ · x64 / ARM64</span></div>
+      </div>
+    </section>
+
+    <section class="shell section showcase" aria-labelledby="showcase-title">
+      <div class="eyebrow">Three real native applications</div>
+      <h2 id="showcase-title">From focused editor to full desktop workspace.</h2>
+      <p class="lede">The same thin real-HWND foundation scales from a local-first Markdown editor to Explorer-style navigation and persistent IDE docking.</p>
+      <figure class="showcase-figure">
+        <img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/showcase/capability-collage.svg" alt="MWFL capability collage showing the Markdown Editor, Explorer, and Docking Workspace" width="1440" height="900" loading="eager" decoding="async">
+        <figcaption>Captured on Windows in one light theme at 100% scale. Every window is a compiled example, not a mockup.</figcaption>
+      </figure>
+      <figure class="showcase-figure showcase-reel">
+        <img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/showcase/mwfl-showcase-40s.gif" alt="40-second MWFL showcase covering responsive DPI-aware UI, Markdown editing and preview, Explorer workflows, docking, and file-drop integration" width="960" height="600" loading="lazy" decoding="async">
+        <figcaption>A 40-second tour of responsive/DPI behavior, edit and preview composition, native file workflows, docking, and desktop file-drop integration.</figcaption>
+      </figure>
+    </section>
+
+    <section class="shell section" id="layers" aria-labelledby="layers-title">
+      <div class="eyebrow">Choose the smallest surface</div>
+      <h2 id="layers-title">Start at the layer your application needs.</h2>
+      <div class="grid">
+        <article class="card"><span class="tag">Core</span><h3>Native UI fundamentals</h3><p>Windows, controls, typed events, layout, DPI, timers, and safe worker handoff.</p><p><a href="tutorial.html">Build the first window</a></p></article>
+        <article class="card"><span class="tag">Application</span><h3>Desktop workflows</h3><p>Commands, forms, documents, dialogs, settings, persistence, and reference applications.</p><p><a href="notepad.html">Build the Notepad workflow</a></p></article>
+        <article class="card"><span class="tag">Advanced</span><h3>Focused Windows integration</h3><p>Docking, printing, OLE, Shell, Ribbon, MDI, graphics, and contextual Help.</p><p><a href="docking-workspace.html">Explore advanced composition</a></p></article>
+        <article class="card"><span class="tag">Optional</span><h3>Separately linked integrations</h3><p>Direct2D/3D, WIC imaging, WebView2, and Scintilla without expanding the core dependency surface.</p><p><a href="optional-integrations.html">Choose an optional component</a></p></article>
       </div>
     </section>
 
@@ -151,20 +178,34 @@ SetLayout(
 }</code></pre>
     </section>
 
-    <section class="shell section" aria-labelledby="examples-title">
-      <div class="eyebrow">Selected examples</div>
+    <section id="applications" class="shell section" aria-labelledby="examples-title">
+      <div class="eyebrow">Applications and examples</div>
       <h2 id="examples-title">Real native UI, ready to explore.</h2>
-      <p class="lede">A focused selection of content-rich applications. Select a card for a larger native screenshot, then open its complete source in a new window.</p>
+      <p class="lede">Five complete standalone applications show how MWFL behaves beyond a control gallery. Each application card opens a detailed design, safety, build, and testing overview before linking to its source.</p>
       <div class="example-catalog">
+        <a class="example-card" href="folder-explorer.html"><img src="https://raw.githubusercontent.com/mwfl/folder-explorer/main/docs/folder-explorer.png" alt="Folder Explorer application" width="1400" height="900" loading="lazy" decoding="async"><strong>Folder Explorer</strong><span>Bounded inventory, PE inspection, and optional AI</span></a>
+        <a class="example-card" href="folder-compare.html"><img src="https://raw.githubusercontent.com/mwfl/folder-compare/main/docs/folder-compare.png" alt="Folder Compare application" width="1283" height="811" loading="lazy" decoding="async"><strong>Folder Compare</strong><span>Local comparison with explicit verified copy</span></a>
+        <a class="example-card" href="markdown-editor.html"><img src="https://raw.githubusercontent.com/mwfl/markdown-editor/main/docs/markdown-editor.png" alt="Markdown Editor application" width="1365" height="879" loading="lazy" decoding="async"><strong>Markdown Editor</strong><span>Local-first editing and offline GFM preview</span></a>
+        <a class="example-card" href="pdf-viewer.html"><img src="https://raw.githubusercontent.com/mwfl/pdf-reader/main/docs/pdf-reader.png" alt="PDF Reader application" width="1280" height="800" loading="lazy" decoding="async"><strong>PDF Reader</strong><span>Tabbed local documents with WebView2 rendering</span></a>
+        <a class="example-card" href="sqlite-viewer.html"><img src="https://raw.githubusercontent.com/mwfl/sqlite-viewer/main/docs/sqlite-viewer.png" alt="SQLite Viewer application" width="1183" height="791" loading="lazy" decoding="async"><strong>SQLite Viewer</strong><span>Read-only schema browsing, queries, and CSV export</span></a>
         <a class="example-card" href="https://github.com/mwfl/mwfl/blob/main/examples/controls/main.cpp"><img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/examples/controls.png" alt="Controls example" width="1462" height="806" loading="lazy" decoding="async"><strong>Controls</strong><span>Complete form-control gallery</span></a>
         <a class="example-card" href="https://github.com/mwfl/mwfl/blob/main/examples/common_controls/main.cpp"><img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/examples/common-controls.png" alt="Common Controls example" width="1920" height="1020" loading="lazy" decoding="async"><strong>Common Controls</strong><span>Complete specialized gallery</span></a>
         <a class="example-card" href="https://github.com/mwfl/mwfl/blob/main/examples/form_binding/main.cpp"><img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/examples/form-binding.png" alt="Form binding example" width="920" height="560" loading="lazy" decoding="async"><strong>Form binding</strong><span>Live model validation and preview</span></a>
         <a class="example-card" href="https://github.com/mwfl/mwfl/blob/main/examples/commands/main.cpp"><img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/examples/commands.png" alt="Commands example" width="1080" height="680" loading="lazy" decoding="async"><strong>Commands</strong><span>Menu, toolbar, and shortcuts in sync</span></a>
         <a class="example-card" href="https://github.com/mwfl/mwfl/blob/main/examples/desktop_integration/main.cpp"><img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/examples/desktop-integration.png" alt="Desktop integration example" width="1120" height="720" loading="lazy" decoding="async"><strong>Desktop integration</strong><span>Dialogs, clipboard, drop, persistence</span></a>
         <a class="example-card" href="https://github.com/mwfl/mwfl/blob/main/examples/layout_gallery/main.cpp"><img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/examples/layout-gallery.png" alt="Layout gallery example" width="1180" height="760" loading="lazy" decoding="async"><strong>Layout gallery</strong><span>Responsive rows, columns, and overlays</span></a>
-        <a class="example-card" href="markdown-editor.html"><img src="https://raw.githubusercontent.com/mwfl/mwfl/main/docs/images/examples/markdown-editor.png" alt="Markdown Editor example" width="1400" height="900" loading="lazy" decoding="async"><strong>Markdown Editor</strong><span>Local-first editing and offline GFM preview</span></a>
       </div>
-      <p class="catalog-more"><a href="components/catalog.html">Search all 42 capabilities and 44 runnable examples <span aria-hidden="true">↗</span></a></p>
+      <p class="catalog-more"><a href="components/catalog.html">Search all 45 capabilities and 43 runnable examples <span aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section class="shell section" aria-labelledby="preview-scope-title">
+      <div class="eyebrow">Public-preview scope</div>
+      <h2 id="preview-scope-title">A tested baseline, with explicit boundaries.</h2>
+      <div class="grid">
+        <article class="card"><span class="tag">Binary release</span><h3>x64 package today</h3><p>The v0.1.2 downloadable binaries target VS2026/MSVC x64. Source builds and CI cover both x64 and ARM64; an ARM64 binary package is not yet published.</p></article>
+        <article class="card"><span class="tag">Core stays small</span><h3>Optional means optional</h3><p>WebView2, Scintilla, Direct2D/3D, WIC, Ribbon, MDI, printing, OLE, Shell, and graphics integrations are requested and linked separately.</p></article>
+        <article class="card"><span class="tag">0.1 contract</span><h3>Public preview, not an ABI promise</h3><p>The stable source surface is documented and tested. The project is collecting real usage before making broader compatibility or ecosystem claims.</p></article>
+      </div>
     </section>
 
     <section class="shell home-strip" aria-label="Principles">
